@@ -1,0 +1,24 @@
+doctype html
+html(lang='ru')
+html
+    head
+        script(src="./public/js/scores.js")
+        link(rel="stylesheet", href="/public/css/style.css")
+    body(onload="showData()")
+        .wrapper
+            .header
+                div(class="header__title title") 
+                    span.header__1 T
+                    span.header__2 e
+                    span.header__3 t
+                    span.header__4 r
+                    span.header__5 i
+                    span.header__6 s
+            div(class = "table__subtitle subtitle") Таблица рекордов:
+            div(class="table__text text")
+                div(class="table__line0" id="line0")
+                div(class="table__line1" id="line1")
+                div(class="table__line2" id="line2")
+                div(class="table__line3" id="line3")
+                div(class="table__line4" id="line4")
+            button(class="table__btn btn" onclick="restart()") ИГРАТЬ СНОВА 

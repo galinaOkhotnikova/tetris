@@ -1,0 +1,47 @@
+doctype html
+html(lang='ru')
+html
+    head
+        script(src="./public/js/main.js")
+        script(defer src="/public/js/game.js")
+        link(rel="stylesheet", href="/public/css/style.css")
+
+    body(onload="setData()")
+        .wrapper
+            .header
+                div(class="header__title title") 
+                    span.header__1 T
+                    span.header__2 e
+                    span.header__3 t
+                    span.header__4 r
+                    span.header__5 i
+                    span.header__6 s
+
+            .game
+                .container
+                    .game__row
+                        .game__left
+                            .game__player
+                                span(class="title2") Игрок: 
+                                span(id="name")
+                            .game__level
+                                span(class="title2") Уровень: 
+                                span(id="level") 0
+                            .game__score
+                                span(class="title2") Баллы: 
+                                span(id="scores") 0
+                            .game__line
+                                span(class="title2") Линии:
+                                span(id="lines") 0
+                            .game__next
+                                span(class="title2") Следующая фигура:
+                                br
+                                canvas(class="game__figure" id="game__figure" width="120" height="120")
+                            ul(class="game__control")
+                                span(class="title2") Управление:
+                                br
+                                li "A" — перемещение фигуры влево
+                                li "D" — перемещение фигуры вправо
+                                li "S" — уронить фигуру
+                                li "W" — повернуть фигуру
+                        canvas(class="game__field" id="game__field" width="320" height="640")        
